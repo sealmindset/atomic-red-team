@@ -95,6 +95,8 @@ zip --password "Hope You Have Eyes on This!!" /tmp/.staging_art/loot.zip /tmp/.s
 echo "Testing: Split the file for Exfil"
 split -a 15 -b 23 "/tmp/.staging_art/loot.zip" "/tmp/.exfil/loot.zip.part-"
 
+# NOTE: Trend Micro XDR misidentified this script as a virus.  Splitting the file into smaller chunks was the culprit 
+
 # Tactic: Defense Evasion
 # Technique: Delete File Indicator Removal on Host: File Deletion https://attack.mitre.org/techniques/T1070/004/
 # Delete evidence
